@@ -41,6 +41,11 @@ function resize() {
 window.addEventListener('resize', resize);
 resize();
 
+// Losing the window mid-run pauses the game instead of feeding the swarm.
+window.addEventListener('blur', () => {
+  if (state === 'playing') state = 'paused';
+});
+
 // ---------------------------------------------------------------- state
 
 let state = 'title'; // title | playing | upgrade | paused | gameover
