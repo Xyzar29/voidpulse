@@ -1,0 +1,24 @@
+/* VOIDPULSE page shell: the game is one full-window canvas on a void-black
+   page. All in-game styling (HUD, menus, cards) is drawn on the canvas. */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #020208;
+}
+
+#game {
+  display: block;
+  cursor: crosshair;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: none;
+}
